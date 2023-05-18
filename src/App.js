@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { TextField, Button, Grid } from '@mui/material';
 import chdoiso from './img/chuyen_doi_so.png'
 import xdnentang from './img/xdnentang.png'
@@ -11,7 +10,6 @@ import app1 from './img/app1.PNG'
 import app2 from './img/app2.JPG'
 import app3 from './img/app3.PNG'
 import app4 from './img/app4.PNG'
-import formbg from './img/form_bg.png'
 import BackupIcon from '@mui/icons-material/Backup';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import { AccessAlarm, ThreeDRotation,  } from '@mui/icons-material';
@@ -30,8 +28,8 @@ function App() {
             <Nav className="me-auto">
               <Nav.Link href="#home">Về chúng tôi</Nav.Link>
               <Nav.Link href="#link">Dịch vụ</Nav.Link>
-              <Nav.Link href="#link">Dự án đã thực hiện</Nav.Link>
-              <Nav.Link href="#link">Liên hệ</Nav.Link>
+              <Nav.Link href="#section3">Dự án đã thực hiện</Nav.Link>
+              <Nav.Link href="#section4">Liên hệ</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -49,17 +47,17 @@ function App() {
                   </Row>
                   <Row className='d-flex'>
                       <div className='col-4'>
-                          Chuyên nghiệp <br />
-                          <ThreeDRotation style={{fontSize: '90px' }}/>
+                          <p style={{fontSize: '1.2em'}}>Chuyên nghiệp</p> 
+                          <ThreeDRotation style={{fontSize: '90px'}}/>
                       </div>
                       <div className='col-4'>
-                          Hiệu quả <br />
-                          <AddTaskIcon style={{fontSize: '90px' }}/>
+                          <p style={{fontSize: '1.2em'}}>Hiệu quả</p> 
+                          <AddTaskIcon style={{fontSize: '90px'}}/>
                       </div>
                       <div className='col-4'>
                           
-                          Dễ dàng lấy data <br />
-                          <BackupIcon  style={{fontSize: '90px' }}/>
+                          <p style={{fontSize: '1.2em'}}>Dễ dàng lấy data</p>
+                          <BackupIcon  style={{fontSize: '90px'}}/>
                       </div>
                   </Row>
 
@@ -89,7 +87,7 @@ function App() {
         <hr />
       </Container>
         {/* Section3 */}
-        <Container >
+        <Container id='section3'>
             <Row className='mt-5 mb-3'>
                 <h3>DỰ ÁN ĐÃ THỰC HIỆN</h3>
             </Row>
@@ -145,8 +143,8 @@ function App() {
           < hr />
       </Container>
     
-      <footer>
-          <p className='text-start col-md-4 offset-md-2' >
+      <footer id='section4'>
+          <p className='text-start col-md-4 offset-md-2 mt-3' >
             <b>Liên hệ với chúng tôi </b><br />
             Tầng 4, Toong Embassy Garden, đường Đỗ Nhuận, Bắc Từ Liêm, Hà Nội <br />
             Hotline: 094.630.0290 <br />
