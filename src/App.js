@@ -11,6 +11,7 @@ import app1 from './img/app1.PNG'
 import app2 from './img/app2.JPG'
 import app3 from './img/app3.PNG'
 import app4 from './img/app4.PNG'
+import formbg from './img/form_bg.png'
 import BackupIcon from '@mui/icons-material/Backup';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import { AccessAlarm, ThreeDRotation,  } from '@mui/icons-material';
@@ -111,33 +112,36 @@ function App() {
 
         
       {/* Section 4: Form */}
-      <Container maxWidth="sm">
-          <h3 className='m-5'>LIÊN HỆ TƯ VẤN</h3>
-          <form onSubmit={handleSubmit} className='col-12 col-md-6 my-5'>
-            <Grid container spacing={2}>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  label="Họ và Tên"
-                  fullWidth
-                  // Add any additional TextField props here
-                />
+      <Container maxWidth="sm" className='section_form'>
+          <div className='col-12 col-md-6 section_form-form'>
+            <form onSubmit={handleSubmit}>
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <h3>ĐĂNG KÝ NGAY ĐỂ ĐƯỢC TƯ VẤN</h3>
+                  <TextField
+                    required
+                    label="Họ và Tên"
+                    fullWidth
+                    // Add any additional TextField props here
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    label="Số điện thoại"
+                    fullWidth
+                    // Add any additional TextField props here
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <button type="submit"  className='form_button'>
+                    Đăng ký
+                  </button>
+                </Grid>
               </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  label="Số điện thoại"
-                  fullWidth
-                  // Add any additional TextField props here
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <Button type="submit" variant="contained" color="primary">
-                  Submit
-                </Button>
-              </Grid>
-            </Grid>
-          </form>
+            </form>
+
+          </div>
           < hr />
       </Container>
     
