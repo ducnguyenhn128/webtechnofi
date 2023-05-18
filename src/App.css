@@ -12,16 +12,30 @@ h2, h3, h4 {
   color: #54337C;
 }
 
-.icon1 {
-  font-size: 50px;
+ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 1.2em;
+}
+
+li::before {
+  content: '\2713'; /* Unicode character for a tick */
+  color: #54337C;; /* Customize the tick color */
+  font-size: 16px; /* Customize the tick size */
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+@media (max-width: 767px) {
+  .mobile-hidden {
+    display: none;
   }
 }
